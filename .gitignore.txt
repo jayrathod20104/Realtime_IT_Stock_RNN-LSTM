@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Trained model files (large / regenerate by running the notebook)
+*.h5
+*.pkl
+
+# Streamlit
+.streamlit/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
