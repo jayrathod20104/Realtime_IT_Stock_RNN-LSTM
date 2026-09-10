@@ -33,16 +33,16 @@ Stock price movement is sequential and time-dependent, making it a natural fit f
 
 | Model | RMSE | MAE |
 |---|---|---|
-| Naive Baseline | — | — |
-| Simple RNN | — | — |
-| LSTM (single feature) | — | — |
+| Naive Baseline | 25.70 | 18.23 |
+| Simple RNN | 47.20 | 36.61 |
+| LSTM (single feature) | 118.24 | 101.22 |
 | LSTM (multivariate) | — | — |
 
 | Company (Scale) | RMSE | Volatility (%) |
 |---|---|---|
-| Infosys (Large Cap) | — | — |
-| Persistent Systems (Mid Cap) | — | — |
-| Zensar Technologies (Small Cap) | — | — |
+| Infosys (Large Cap) | 52.46 | 1.63% |
+| Persistent Systems (Mid Cap) | 263.65 | 2.21% |
+| Zensar Technologies (Small Cap) | 32.63 | 2.60% |
 
 ## Repository Structure
 
