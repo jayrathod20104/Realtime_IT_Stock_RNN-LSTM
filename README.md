@@ -29,8 +29,6 @@ Stock price movement is sequential and time-dependent, making it a natural fit f
 
 ## Results
 
-*(Fill in with your actual numbers after running the notebook)*
-
 | Model | RMSE | MAE |
 |---|---|---|
 | Naive Baseline | 25.70 | 18.23 |
