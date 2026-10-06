@@ -26,7 +26,7 @@ st.caption("Predicts next-day closing price for Indian IT sector stocks using a 
 # ---------------- Load Model & Scaler ----------------
 @st.cache_resource
 def load_assets():
-    model = load_model("it_stock_multivariate_lstm.h5")
+    model = load_model("it_stock_multivariate_lstm.h5", compile=False)
     scaler = joblib.load("multi_scaler.pkl")
     features = joblib.load("feature_list.pkl")
     return model, scaler, features
@@ -255,7 +255,7 @@ with tab2:
         st.warning("Could not fetch data right now. Try again in a moment.")
     else:
         st.dataframe(
-            overview_df.style.applymap(
+            overview_df.style.map(
                 lambda v: "color: green;" if isinstance(v, (int, float)) and v > 0
                 else ("color: red;" if isinstance(v, (int, float)) and v < 0 else ""),
                 subset=["Change %"]
@@ -409,7 +409,7 @@ with tab1:
                     return "color: gray;"
 
                 st.dataframe(
-                    news_df.style.applymap(highlight_sentiment, subset=["Sentiment"]),
+                    news_df.style.map(highlight_sentiment, subset=["Sentiment"]),
                     use_container_width=True,
                     hide_index=True,
                 )
